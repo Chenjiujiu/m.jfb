@@ -193,7 +193,7 @@ Product.prototype = {
 							targent:{opacity:0},
 							fn:function(){
 								$('.jfb-model').hide();
-								$(".jfb-model .model-box").css('opacity',1);git
+								$(".jfb-model .model-box").css('opacity',1);
 							}
 						});
 						that.dom.find('.del-top').removeClass('rotate');
