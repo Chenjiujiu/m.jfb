@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@import "variable";
+@import "cjj";
+.jfb-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 40px;
+	z-index: 500;
+	.jfb-header-box {
+		position: relative;
+		margin: 0 auto;
+		background-color: #fff;
+		height: 40px;
+		@include box-shadow(0 0 5px 0 rgba(0,0,0,.4));
+		.goback {
+			width: 60px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			display: block;
+			color: $gray02;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.form {
+			width: 100%;
+			height: 40px;
+			padding-left: 60px;
+			padding-right: 50px;
+			@include box-size;
+			input {
+				width: 100%;
+				@include box-size;
+				height: 30px;
+				border-radius: 15px;
+				margin-top: 5px;
+				padding: 0 10px 0 30px;
+				background-color: $blue007;
+			}
+			.icon-search {
+				background-position: -60px -109px;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 14px;
+				text-align: center;
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 65px;
+			}
+		}
+		.menu {
+			width: 50px;
+			height: 40px;
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			font-size: 15px;
+			color: $gray02;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+.tab {
+	padding-top: 40px;
+	ul {
+		border-bottom: 1px solid $gray05;
+		padding: px2rem(5px) 0;
+		li {
+			float: left;
+			width: 25%;
+			text-align: center;
+			a {
+				display: block;
+				.icon-font {
+					padding-left: 5px;
+				}
+			}
+			&.current {
+				a {
+					color: $color-Main;
+				}
+			}
+		}
+	}
+}
+.pro-box {
+	.pro-list {
+		background-color: $blue007;
+		padding: px2rem(10px);
+		.pro-item {
+			@include box-size;
+			background-color: #fff;
+			width: 49%;
+			float: left;
+			margin-bottom: px2rem(10px);
+			padding-bottom: px2rem(10px);
+			&:nth-child(2n-1) {
+				margin-right: 2%;
+			}
+			.img {
+				a {
+					display: block;
+				}
+				img {
+					width: 100%;
+				}
+			}
+			.info {
+				padding: px2rem(4px) px2rem(5px);
+				overflow: hidden;
+				@include overDot-M(2);
+			}
+			.price {
+				padding: 0 px2rem(5px);
+				color: $color-Main;
+				font-size: 18px;
+			}
+			.porom{
+				.porom-item{
+					margin: 0 px2rem(2px);
+					font-size: 12px;
+					color: $color-Main;
+					background-color: #fff;
+					border: 1px solid $color-Main;
+					display: inline-block;
+					padding: 0 3px;
+				}
+			}
+			.comm {
+				padding: 0 px2rem(5px);
+				font-size: 12px;
+				color: $gray02;
+			}
+		}
+	}
+	.pro-null{
+		display: none;
+		margin-top: 20px;
+		text-align: center;
+		height: 20px;
+		line-height: 20px;
+		p.title{
+			font-weight: 500;
+			font-size: 16px;
+		}
+		p{
+			padding-bottom: 10px;
+			color: $red02;
+		}
+	}
+}

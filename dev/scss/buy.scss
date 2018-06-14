@@ -1,0 +1,474 @@
+@charset "UTF-8";
+@import "variable";
+@import "cjj";
+body {
+	background-color: $blue007;
+}
+.jfb-topBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: none;
+	background-color: #fff;
+	@include transition5;
+	.title {
+		text-align: center;
+		span {
+			display: inline-block;
+			width: 20%;
+			text-align: center;
+			&.active {
+				color: $color-Main;
+			}
+		}
+	}
+}
+.product {
+	width: 100%;
+	div + div {
+		padding: px2rem(5px) px2rem(10px);
+	}
+	.product-pic {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		.pic-list {
+			width: 1000%;
+			li {
+				width: 10%;
+				float: left;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.page {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			height: 20px;
+			padding: 0 8px;
+			background-color: rgba(0, 0, 0, .5);
+			@include border-radius(10px);
+			color: #fff;
+		}
+	}
+	.product-desc {
+		line-height: px2rem(20px);
+		background-color: #fff;
+	}
+	.product-price {
+		color: $color-Main;
+		font-weight: 700;
+		font-size: 18px;
+		background-color: #fff;
+		.old-price{
+			font-size: 12px;
+			color: $gray02;
+			text-decoration: line-through;
+			margin-left: px2rem(5px);
+		}
+	}
+	.product-promo {
+		margin-top: px2rem(10px);
+		background-color: #fff;
+		color: $gray02;
+		span {
+			display: inline-block;
+			color: #ffffff;
+			background-color: $color-Main;
+			padding: 0 px2rem(5px);
+			margin-right: px2rem(10px);
+			@include border-radius(px2rem(5px));
+		}
+	}
+	.product-site {
+		background-color: #fff;
+		color: $gray02;
+		span {
+			color: #000;
+		}
+	}
+	.product-info {
+		margin-top: px2rem(10px);
+		background-color: #fff;
+		color: $gray02;
+		.icon-font {
+			float: right;
+			@include transition1;
+			&.rotate{
+				@include transform(rotate(90deg));
+			}
+		}
+		ul {
+			display: none;
+			padding: px2rem(5px) px2rem(10px);
+			li {
+				padding: px2rem(2px) 0;
+			}
+			.title {
+				display: inline-block;
+				width: 80px;
+				color: #000;
+			}
+		}
+	}
+	.product-size {
+		margin-top: px2rem(10px);
+		background-color: #fff;
+		color: $gray02;
+		.size-title {
+			display: block;
+			margin-bottom: px2rem(5px);
+		}
+		ul {
+			li {
+				float: left;
+				width: px2rem(25px);
+				height: px2rem(25px);
+				line-height: px2rem(25px);
+				border: 1px solid $gray05;
+				text-align: center;
+				margin: 0 px2rem(5px);
+				color: $gray02;
+				&.current {
+					color: $color-Main;
+					border-color: $color-Main;
+				}
+				&.no-size{
+					color: $gray05;
+					border-color: $gray05;
+					border-style: dashed;
+				}
+			}
+		}
+	}
+	.product-color {
+		background-color: #fff;
+		color: $gray02;
+		.color-title {
+			display: block;
+			margin-bottom: px2rem(5px);
+		}
+		ul {
+			li {
+				float: left;
+				height: px2rem(25px);
+				line-height: px2rem(25px);
+				border: 1px solid $gray05;
+				text-align: center;
+				margin: px2rem(5px);
+				color: $gray02;
+				img {
+					height: 100%;
+					float: left;
+				}
+				&.current {
+					color: $color-Main;
+					border-color: $color-Main;
+				}
+				span {
+					padding: 0 px2rem(5px);
+				}
+			}
+		}
+	}
+	.product-nums {
+		background-color: #fff;
+		color: $gray02;
+		.nums-title {
+			float: left;
+			height: px2rem(20px);
+			line-height: px2rem(20px);
+		}
+		.nums-list {
+			border: 1px solid $gray05;
+			float: left;
+			li {
+				float: left;
+				width: px2rem(20px);
+				height: px2rem(20px);
+				line-height: px2rem(20px);
+				text-align: center;
+				&.disabled {
+					a {
+						color: $gray05;
+					}
+				}
+			}
+			a {
+				display: block;
+				font-weight: 700;
+			}
+			.num_input{
+				width: px2rem(40px);
+			}
+
+			input {
+				@include box-size;
+				width: px2rem(40px);
+				height: px2rem(20px);
+				line-height: px2rem(20px);
+				text-align: center;
+				padding: 0 px2rem(5px);
+				border-left: 1px solid $gray05;
+				border-right: 1px solid $gray05;
+				vertical-align: top;
+			}
+		}
+	}
+
+}
+.comment {
+	background-color: #fff;
+	margin-top: px2rem(10px);
+	padding-bottom: px2rem(10px);
+	&.nomargin {
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+	.comment-title {
+		padding: px2rem(6px) px2rem(5px);
+		color: $gray02;
+	}
+	.comment-keywords {
+		padding: 0 px2rem(5px);
+		li {
+			display: inline-block;
+			padding: 0 px2rem(5px);
+			margin: 0 px2rem(5px) px2rem(5px) 0;
+			@include border-radius(px2rem(3px));
+			@include box-shadow(0 2px 2px 0 rgba(0, 0, 0, .1));
+			&.good {
+				border: 1px solid $blue008;
+				a {
+					color: $color-Main;
+				}
+			}
+			&.bad {
+				border: 1px solid $red03;
+				a {
+					color: $red02;
+				}
+			}
+		}
+	}
+	.comment-box {
+		margin-top: px2rem(10px);
+		.comment-list {
+			padding: 0 px2rem(5px);
+			.comment-item {
+				border-bottom: 1px solid $gray05;
+				padding-bottom: px2rem(10px);
+				margin-bottom: px2rem(20px);
+				.info {
+					font-size: 12px;
+					margin-bottom: px2rem(5px);
+					.author {
+						float: left;
+						color: $gray02;
+						.anonymous {
+							color: $red02;
+							margin-left: px2rem(5px);
+						}
+					}
+					.time {
+						float: right;
+						color: $gray02;
+					}
+				}
+				.content {
+					.img {
+						margin-top: px2rem(3px);
+						.img-small {
+							li {
+								padding: px2rem(1px);
+								float: left;
+								border: 1px solid $gray05;
+								margin-right: px2rem(5px);
+								img {
+									width: px2rem(50px);
+									height: px2rem(50px);
+								}
+							}
+						}
+						.img-big {
+							display: none;
+						}
+					}
+					.reply {
+						padding: px2rem(2px) px2rem(8px);
+						font-size: 12px;
+						color: $color-Main;
+						span {
+							padding-right: px2rem(5px);
+						}
+					}
+				}
+				.type {
+					p {
+						display: inline-block;
+						margin-right: px2rem(10px);
+						color: $gray02;
+					}
+				}
+			}
+		}
+		.loding {
+			margin: 0 auto;
+			width: 30px;
+			height: 30px;
+			background: url(../images/loding.png) no-repeat center center;
+			animation-name: rotate_360;
+			animation-duration: .8s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			@include keyf(rotate_360) {
+				0% {
+					#{$bro}transform: rotate(0);
+				}
+
+				100% {
+					#{$bro}transform: rotate(360deg);
+				}
+			}
+		;
+		}
+
+	}
+}
+.comment-more {
+	margin-top: px2rem(10px);
+	text-align: center;
+	a {
+		display: inline-block;
+		color: $color-Main;
+		@include border-radius(px2rem(5px));
+		padding: px2rem(2px) px2rem(10px);
+		border: 1px solid $color-Main;
+		font-size: 12px;
+	}
+}
+
+.detail {
+	background-color: #fff;
+	margin-top: px2rem(10px);
+	padding-bottom: 55px;
+	.detail-title {
+		padding: px2rem(6px) px2rem(5px);
+		color: $gray02;
+	}
+	.img-box {
+		img {
+			width: 100%;
+		}
+	}
+}
+.fun {
+	height: 50px;
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	li {
+		float: left;
+		text-align: center;
+		line-height: 50px;
+		&.btn-go {
+			width: 30%;
+			font-size: 12px;
+			padding-top: 5px;
+			a {
+				display: block;
+				float: left;
+				width: 50%;
+				color: $gray02;
+			}
+			i {
+				display: block;
+				height: 20px;
+				line-height: 20px;
+				width: 100%;
+				font-size: 18px;
+			}
+			span {
+				display: block;
+				height: 20px;
+				line-height: 20px;
+				width: 100%;
+
+			}
+		}
+		&.btn-buy {
+			width: 70%;
+		}
+	}
+
+	.addcar {
+		float: left;
+		width: 50%;
+		background-color: $blue008;
+		color: $color-Main;
+		font-weight: 700;
+	}
+	.buynow {
+		float: left;
+		width: 50%;
+		background-color: $color-Main;
+		color: #fff;
+		font-weight: 700;
+	}
+}
+.jfb-modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1001;
+	.modal-box{
+		@include box-size;
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		margin-top: -68px	;
+		border: 1px solid #e0e0e0;
+		border-radius: 5px;
+		background-color: #fff;
+		padding: 15px;
+		.title{
+			line-height: 55px;
+			color: #666;
+			font-size: 20px;
+			text-align: center;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		.btns{
+			text-align: center;
+			padding-top: 10px	;
+			a{
+				width: 42%;
+				display: inline-block;
+				height: 36px;
+				line-height: 36px;
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				color: #888;
+				text-align: center;
+			}
+			.agree{
+				background-color: $color-Main;
+				color: #fff;
+				margin-right: 8%;
+			}
+			.cancel{
+
+			}
+		}
+	}
+}

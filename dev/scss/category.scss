@@ -1,0 +1,140 @@
+@charset "UTF-8";
+$bg:#e0e0e0;
+@import "variable";
+@import "cjj";
+html,body{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	@include box-size;
+}
+
+.jfb-category{
+	height: 100%;
+	width: 100%;
+	margin-top: 45px;
+	.category-nav{
+		@include box-size;
+		width: px2rem(90px);
+		min-width: 90px;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: 45px;
+		padding-bottom: 45px;
+		z-index: 500;
+		>ul{
+			>li{
+				height: px2rem(50px);
+				width: px2rem(90px);
+				background-color: #f3f4f6;
+				>a{
+					height: px2rem(50px);
+					width: px2rem(90px);
+					line-height: px2rem(50px);
+					display: block;
+					text-align: center;
+					border-right: 1px solid $bg;
+					border-bottom: 1px solid $bg;
+
+				}
+				&.active{
+					background-color: #fff;
+					>a{
+						border-right: none;
+						color: #f15353;
+					}
+				}
+			}
+		}
+
+	}
+	.category-body{
+		@include box-size;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding:45px 0 0 px2rem(90px);
+		background-color: #fff;
+		.body-box{
+			padding: px2rem(10px) px2rem(12px) ;
+			.box-banner{
+				>a{
+					display: block;
+					>img{
+						width: 100%;
+					}
+				}
+			}
+			.box-product{
+				margin-top: px2rem(20px);
+				font-size: 12px;
+				.product-title{
+					color: #888;
+					margin-bottom: px2rem(10px);
+				}
+				>ul{
+					>li{
+						width: 33.33%;
+						text-align: center;
+						float: left;
+						img{
+							display: block;
+							width: px2rem(62px);
+							height: px2rem(62px);
+							margin: 0 auto;
+						}
+						p{
+							line-height: px2rem(30px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.jfb-footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 45px;
+	width: 100%;
+	background-color: #fff;
+	z-index: 1001;
+	@include box-shadow(0 0 5px 0 rgba(0,0,0,.4));
+	li{
+		float: left;
+		width: 25%;
+		text-align: center;
+		height: 45px;
+		line-height: 45px;
+		&.current{
+			a{
+				color: $color-Main;
+			}
+		}
+		a{
+			display: block;
+		}
+		i {
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			padding-top: 5px;
+			width: 100%;
+			font-size: 18px;
+		}
+		span {
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			width: 100%;
+
+		}
+	}
+}

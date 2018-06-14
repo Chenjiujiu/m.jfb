@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="鞋子商城,专业卖鞋网站,经营阿迪达斯，NIKE耐克、李宁、安踏、新百伦、Kappa、亚瑟士、斯凯奇等超值名牌鞋。正品保障，极速发货，退货无忧！">
+	<meta name="keywords" content="疾风步,阿迪，耐克,李宁,特步，新百伦">
+	<script src="js/rem.js"></script>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/pass.css">
+	<title>疾风步-注册</title>
+</head>
+<body>
+
+	<header class="header">
+		<a href="javascript:;" class="goback"><i class="icon-font">&#xe900;</i></a>
+		疾风步账号注册
+	</header>
+	<section class="page">
+		<div class="page-body">
+			<form>
+				<div class="register-box">
+					<div class="input-container">
+						<label for="username" class="txt-username">用户名</label>
+						<input id="username" type="text" value="" placeholder="以字母开头5-20位字母数字组合">
+						<i class="icon-font">&#xe90d;</i>
+					</div>
+					<div class="input-container">
+						<label for="tel" class="txt-tel">手机号</label>
+						<p class="area-box">
+							<span class="area-code" data-code="86">+86</span>
+							<i class="icon-font">&#xe90c;</i>
+						</p>
+						<input id="tel" class="input-tel" type="tel" placeholder="11位手机号码">
+						<i class="icon-font">&#xe90d;</i>
+					</div>
+					<div class="input-container input-code">
+						<label for="code" class="code">验证码</label>
+						<input id="code" type="text" maxlength="4" placeholder="请输入图片验证码">
+						<i class="icon-font">&#xe90d;</i>
+						<span class="code-box"><img src="./data/codepic.php"></span>
+					</div>
+					<div class="input-container">
+						<label for="password" class="txt-password">设置密码</label>
+						<input id="password" type="password" value="" placeholder="6-20个英文或数字组合">
+						<i class="icon-font">&#xe90d;</i>
+					</div>
+					<div class="input-container">
+						<label for="password2" class="txt-password2">确认密码</label>
+						<input id="password2" type="password" value="" placeholder="请再次输入密码">
+						<i class="icon-font">&#xe90d;</i>
+					</div>
+				</div>
+			</form>
+			<div class="notice" id="notice-tip"></div>
+			<div class="notice notic-register">点击注册，表示您同意疾风步《<a href="#">服务协议及隐私</a>》</div>
+			<a href="javascript:;" class="sub-btn" id="submit">同意协议并注册</a>
+			<div class="page-nav">
+				<a href="./index.html" class="index">
+					<i class="icon-font">&#xe907;</i>
+					返回首页
+				</a>
+				<a href="./login.html" class="register">
+					<i class="icon-font">&#xe916;</i>
+					返回登录
+				</a>
+			</div>
+		</div>
+	</section>
+	<div class="jfb-model" id="model-success">
+		<div class="model-box">
+			<div class="title">注册成功！</div>
+			<div class="btns">
+				<a href="javascript:;" class="cancel goback">返回</a>
+				<a href="./index.html" class="agree">主页</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./js/lib/zepto.min.js"></script>
+<script src="./js/cjj.js"></script>
+<script src="./js/public.js"></script>
+<script src="./js/register.js"></script>
+</html>

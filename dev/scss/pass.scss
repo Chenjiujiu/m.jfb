@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import "variable";
+@import "cjj";
+body {
+	width: 100%;
+}
+.header {
+	width: 100%;
+	height: px2rem(45px);
+	line-height: px2rem(45px);
+	background-color: $blue007;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	position: relative;
+	.goback {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: px2rem(45px);
+		height: px2rem(45px);
+		line-height: px2rem(45px);
+		text-align: center;
+	}
+}
+.page {
+	.page-title {
+		> h2 {
+			width: 50%;
+			height: px2rem(44px);
+			line-height: px2rem(44px);
+			border-bottom: 1px solid $gray05;
+			float: left;
+			text-align: center;
+			span {
+				display: inline-block;
+				padding: 0 px2rem(10px);
+				height: px2rem(43px);
+				line-height: px2rem(43px);
+				border-bottom: 2px solid transparent;
+			}
+			&.active {
+				span {
+					border-bottom: 2px solid $color-Main;
+				}
+			}
+		}
+	}
+	.page-body {
+		padding: 0 px2rem(20px) px2rem(20px);
+		.input-container {
+			height: px2rem(48px);
+			line-height: px2rem(48px);
+			position: relative;
+			border-bottom: 1px solid $gray05;
+			label {
+				position: absolute;
+				display: inline-block;
+				width: 60px;
+				height: px2rem(48px);
+				line-height: px2rem(48px);
+			}
+			input {
+				width: 100%;
+				@include box-size;
+				padding: 0 px2rem(30px) 0 60px;
+			}
+			.icon-font {
+				display: none;
+				position: absolute;
+				right: px2rem(10px);
+				top: px2rem(13px);
+				width: px2rem(22px);
+				height: px2rem(22px);
+				line-height: px2rem(22px);
+				text-align: center;
+				color: #fff;
+				@include border-radius(50%);
+				background-color: $gray05;
+			}
+		}
+		.username_login {
+			display: block;
+			.input-code {
+				input {
+					padding: 0 px2rem(100px) 0 60px;
+				}
+				.icon-font {
+					display: none;
+					right: px2rem(100px);
+				}
+				.code-box {
+					width: px2rem(75px);
+					height: px2rem(48px);
+					line-height: px2rem(48px);
+					border-left: 1px solid $gray05;
+					position: absolute;
+					right: px2rem(5px);
+					top: 0;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.sms_login {
+			display: none;
+			.input-container {
+				label{
+					text-align: center;
+					width: 80px;
+					.icon-font{
+						display: inline-block;
+						position: static;
+						background-color: #fff;
+						color: $gray05;
+					}
+				}
+				input {
+					padding-right: px2rem(130px);
+					padding-left: 80px;
+				}
+				.icon-font{
+					right: px2rem(110px);
+				}
+				.getcode{
+					position: absolute;
+					right: 0;
+					top: px2rem(12px);
+					width: px2rem(100px);
+					border-left: 1px solid $gray05;
+					height: px2rem(23px);
+					line-height: px2rem(23px);
+					background-color: #fff;
+					color: $gray02;
+				}
+				.code-input{
+					padding:0 px2rem(10px) 0 px2rem(10px);
+					&+.icon-font{
+						right: px2rem(10px);
+					}
+				}
+			}
+		}
+		.forget-input{
+			margin-top: px2rem(20px);
+		}
+		.foget-btn{
+			height: px2rem(50px);
+			line-height: px2rem(50px);
+			margin-top: px2rem(50px);
+			@include border-radius(0.25rem);
+			border: 1px solid $color-Main;
+			text-align: center;
+			width: 100%;
+			color: $color-Main;
+			position: relative;
+			cursor: pointer;
+			img{
+				position: absolute;
+				height: px2rem(30px);
+				left: px2rem(10px);
+				top: px2rem(9px);
+			}
+		}
+		.register-box{
+			.input-code {
+				input {
+					padding: 0 px2rem(100px) 0 60px;
+				}
+				.icon-font {
+					display: none;
+					right: px2rem(100px);
+				}
+				.code-box {
+					width: px2rem(75px);
+					height: px2rem(48px);
+					line-height: px2rem(48px);
+					border-left: 1px solid $gray05;
+					position: absolute;
+					right: px2rem(5px);
+					top: 0;
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.area-box{
+				display: block;
+				width: 80px;
+				position: absolute;
+				top: 0;
+				left: px2rem(48px);
+				text-align: right;
+				.icon-font{
+					display: inline-block;
+					background-color: #fff;
+					color: $gray05;
+					position: static;
+				}
+			}
+			.input-tel{
+				padding-left: 150px;
+			}
+		}
+	}
+	.notice {
+		opacity: 0;
+		color: red;
+		height: px2rem(30px);
+		line-height: px2rem(30px);
+		font-size: 12px;
+		min-height: px2rem(12px);
+	}
+	.notic-register{
+		opacity: 1;
+		color: $gray03;
+		a{
+			color: $color-Main;
+		}
+	}
+	.sub-btn {
+		display: block;
+		width: 100%;
+		height: px2rem(45px);
+		line-height: px2rem(45px);
+		text-align: center;
+		color: #fff;
+		background-color: $color-Main;
+	}
+}
+.page-nav {
+	margin-top: px2rem(20px);
+	.icon-font {
+		color: $gray02;
+	}
+	a {
+		color: $gray02*0.4;
+		line-height: px2rem(22px);
+	}
+	.foget {
+		float: left;
+	}
+	.register {
+		float: right;
+	}
+}
+.other-login{
+	margin-top: px2rem(105px);
+	height: px2rem(85px);
+	position: relative;
+	padding: px2rem(24px) px2rem(10px) 0 px2rem(10px);
+	border-top: 1px solid $gray05;
+	text-align: center;
+	.other-title{
+		position: absolute;
+		top: px2rem(-19px);
+		left: 50%;
+		@include transform(translateX(-50%));
+		background-color: #fff;
+		padding: px2rem(5px) px2rem(15px);
+		color: $gray05;
+		font-weight: 700;
+	}
+	a{
+		display: inline-block;
+		width: px2rem(100px);
+		height: px2rem(100px);
+		line-height: px2rem(100px);
+		.icon-font{
+			font-size: px2rem(30px);
+		}
+	}
+	.login-qq{
+		color: $blue009;
+	}
+	.login-wx{
+		color: #4db232;
+	}
+}
+.jfb-model{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1001;
+	.model-box{
+		@include box-size;
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		margin-top: -68px	;
+		border: 1px solid #e0e0e0;
+		border-radius: 5px;
+		background-color: #fff;
+		padding: 15px;
+		.title{
+			line-height: 55px;
+			color: #666;
+			font-size: 20px;
+			text-align: center;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		.btns{
+			text-align: center;
+			padding-top: 10px	;
+			a{
+				width: 42%;
+				display: inline-block;
+				height: 36px;
+				line-height: 36px;
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				color: #888;
+				text-align: center;
+			}
+			.agree{
+				background-color: $color-Main;
+				color: #fff;
+				margin-right: 8%;
+			}
+			.cancel{
+
+			}
+		}
+	}
+}

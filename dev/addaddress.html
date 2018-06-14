@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="鞋子商城,专业卖鞋网站,经营阿迪达斯，NIKE耐克、李宁、安踏、新百伦、Kappa、亚瑟士、斯凯奇等超值名牌鞋。正品保障，极速发货，退货无忧！">
+	<meta name="keywords" content="疾风步,阿迪，耐克,李宁,特步，新百伦">
+	<script src="js/rem.js"></script>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/publicHeader.css">
+	<link rel="stylesheet" href="./css/addaddress.css">
+	<title>疾风步-添加地址</title>
+</head>
+<body>
+	<div class="jfb-topBar">
+		<a href="javascript:;" class="icon-back goback">
+			<i class="icon-font">&#xe900;</i>
+		</a>
+		<h2 class="title">
+			<span class="title-product">添加收货地址</span>
+		</h2>
+		<a href="javascript:;" class="txt-right" id="submit">
+			<span>保存</span>
+		</a>
+	</div>
+	<div class="from">
+		<ul class="input-box">
+			<li>
+				<i class="icon-font"></i>
+				<input type="text" id="consignee" placeholder="收货人">
+			</li>
+			<li>
+				<i class="icon-font"></i>
+				<input type="tel" id="cellphone" placeholder="手机号码">
+			</li>
+			<li>
+				<i class="icon-font"></i>
+				<input type="text" id="addre" placeholder="所在地区">
+			</li>
+			<li class="row2">
+				<i class="icon-font"></i>
+				<textarea rows="2" id="address" placeholder="详细地址:街道号、门牌号、小区、楼栋号、单元室等"></textarea>
+			</li>
+			<li class="is-default" data-d="0">
+				<i class="icon-font">&#xe913;</i>
+				<span >设为默认地址</span>
+			</li>
+		</ul>
+	</div>
+	<div class="del">
+		<span>删除此地址</span>
+	</div>
+	<div class="jfb-modal">
+		<div class="model-box">
+			<div class="title">确认删除此地址吗？</div>
+			<div class="btns">
+				<a href="javascript:;" class="agree">确认</a>
+				<a href="javascript:;" class="cancel">取消</a>
+			</div>
+		</div>
+	</div>
+	<div class="jfb-city">
+		<div class="city-box">
+			<div class="title">
+				请选择省市区
+				<i class="icon-font close" >&#xe90d;</i>
+			</div>
+			<div class="sele-box">
+				<span class="province current" data-type="1">请选择</span>
+				<span class="city" data-type="2"></span>
+				<span class="county" data-type="3"></span>
+			</div>
+			<div class="citys">
+				<ul class="citys-list" id="citys-list">
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./js/lib/zepto.min.js"></script>
+<script src="./js/cjj.js"></script>
+<script src="./js/public.js"></script>
+<script src="./js/addaddress.js"></script>
+</html>

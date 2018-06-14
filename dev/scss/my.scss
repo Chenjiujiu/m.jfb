@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import "variable";
+@import "cjj";
+html{
+	background-color: $blue007;
+}
+body {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $blue007;
+}
+.jfb-header {
+	height: px2rem(170px);
+	width: 100%;
+	background: url("../images/bg/bg01.jpg") no-repeat center center;
+	@include background-size(cover);
+	.header-user {
+		height: px2rem(110px);
+		position: relative;
+		.user-pic {
+			width: px2rem(70px);
+			height: px2rem(70px);
+			@include border-radius(50%);
+			overflow: hidden;
+			text-align: center;
+			position: absolute;
+			bottom: px2rem(-35px);
+			left: px2rem(20px);
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.user-name {
+			position: absolute;
+			bottom: px2rem(5px);
+			left: px2rem(100px);
+			color: #fff;
+			font-weight: 600;
+			font-size: 16px;
+		}
+	}
+	.header-nav {
+		background-color: #fff;
+		ul {
+			@include box-size;
+			height: px2rem(60px);
+			padding-top: px2rem(10px);
+		}
+		li {
+			float: right;
+			text-align: center;
+			height: px2rem(40px);
+			padding: 0 20px;
+			& + li {
+				border-right: 1px solid $gray01;
+			}
+			a {
+				display: block;
+			}
+		}
+	}
+}
+.jfb-nav {
+	background-color: #fff;
+	margin-top: px2rem(15px);
+	ul {
+		width: 100%;
+		padding: px2rem(5px) 0;
+	}
+	li {
+		width: 20%;
+		float: left;
+		text-align: center;
+		i{
+			font-size: 20px;
+			color: $gray03;
+		}
+		a {
+			font-size: 12px;
+			display: block;
+			color: $gray02*0.5;
+			position: relative;
+			.num{
+				font-size: 12px;
+				display: block;
+				text-align: center;
+				background-color: #fff;
+				width: 15px;
+				height: 15px;
+				line-height: 15px;
+				@include border-radius(50%);
+				border: 1px solid $red02;
+				color: $red01;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				&:empty{
+					display: none;
+				}
+			}
+		}
+
+	}
+}
+.jfb-main {
+	margin-top: px2rem(15px);
+	background-color: #fff;
+	ul{
+		padding-left: 50px;
+		li{
+			height:40px;
+			line-height:40px;
+			border-bottom: 1px solid $gray04*0.9;
+			position: relative;
+			a{
+				display: block;
+			}
+		}
+		.icon-arrow{
+			padding-right: 10px;
+			float: right;
+			color: $gray05;
+		}
+		.icon-pic{
+			display: block;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			margin-top: 8px;
+			color: #fff;
+			position: absolute;
+			font-size: 18px;
+			left: -32px;
+			@include border-radius(4px);
+		}
+		.main-order{
+			.icon-pic{
+				background-color: $color-Main;
+			}
+		}
+		.main-search{
+			.icon-pic{
+				background-color: #00aeef;
+			}
+		}
+		.main-cart{
+			.icon-pic{
+				background-color: #e7a200;
+			}
+		}
+		.main-site{
+			.icon-pic{
+				background-color: #5090cd;
+			}
+		}
+		.main-info{
+			.icon-pic{
+				background-color: $red02;
+			}
+		}
+	}
+}
+.jfb-bar{
+	margin-top: px2rem(15px);
+	background-color: #fff;
+	li{
+		float: right;
+		padding: 10px	;
+		&+li{
+			border-right: 1px solid $gray04;
+		}
+		a{
+			display: block;
+		}
+	}
+}
+.jfb-modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1001;
+	.modal-box{
+		@include box-size;
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		margin-top: -68px	;
+		border: 1px solid #e0e0e0;
+		border-radius: 5px;
+		background-color: #fff;
+		padding: 15px;
+		.title{
+			line-height: 55px;
+			color: #666;
+			font-size: 20px;
+			text-align: center;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		.btns{
+			text-align: center;
+			padding-top: 10px	;
+			a{
+				width: 42%;
+				display: inline-block;
+				height: 36px;
+				line-height: 36px;
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				color: #888;
+				text-align: center;
+			}
+			.agree{
+				background-color: $color-Main;
+				color: #fff;
+				margin-right: 8%;
+			}
+			.cancel{
+
+			}
+		}
+	}
+}
+.jfb-footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 45px;
+	width: 100%;
+	background-color: #fff;
+	z-index: 1001;
+	@include box-shadow(0 0 5px 0 rgba(0,0,0,.4));
+	li{
+		float: left;
+		width: 25%;
+		text-align: center;
+		height: 45px;
+		line-height: 45px;
+		&.current{
+			a{
+				color: $color-Main;
+			}
+		}
+		a{
+			display: block;
+		}
+		i {
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			padding-top: 5px;
+			width: 100%;
+			font-size: 18px;
+		}
+		span {
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			width: 100%;
+
+		}
+	}
+}
